@@ -1,0 +1,60 @@
+#board {
+    position: relative;
+}
+
+.intersection {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    
+}
+
+.intersection.black,
+.intersection.white {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.intersection.black:before,
+.intersection.white:before {
+    top: -6px;
+    left: -6px;
+}
+.intersection.black:after,
+.intersection.white:after {
+    top: -6px;
+    left: -6px;
+}
+
+.intersection:before {
+    border-top: 2px #000 solid;
+    width: 40px;
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+
+.intersection:after {
+    border-left: 2px #000 solid;
+    height: 40px;
+    display: block;
+    content: "";
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+}
+
+.intersection.black, .intersection.white {
+    border: 1px solid #000;
+}
+
+.intersection.black {
+    background-color: #444;
+}
+
+.intersection.white {
+    background-color: #eee;
+}
